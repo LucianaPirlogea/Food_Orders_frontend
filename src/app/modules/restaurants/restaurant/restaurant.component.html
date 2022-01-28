@@ -1,0 +1,31 @@
+<div  id="container">
+<mat-card class="meniu">
+    <div id = "imagine">
+        <img mat-card-image src="/assets/images/imagine2.jpg" alt="Imagine indisponibila">
+    </div>
+        <mat-selection-list #menu >
+            <mat-list-option *ngFor="let mancare of meniu">
+              {{mancare.denumire}}({{mancare.cantitate}}): {{mancare.pret}} lei
+              
+            </mat-list-option>
+            
+          </mat-selection-list>
+          
+          <p>
+            Options selected: {{menu.selectedOptions.selected.length}}
+          </p>
+          
+          <button mat-raised-button (click) = "goToComanda()"> 
+            Finalizare comanda
+          </button>
+</mat-card>
+</div>
+
+<div id = "logged">
+  <button mat-raised-button (click) = "logout()"> 
+    Logout
+  </button>
+  <p>
+    Logged user: {{loggedUser.email}}
+  </p>
+</div>

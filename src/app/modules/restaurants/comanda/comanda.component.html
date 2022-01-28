@@ -1,0 +1,12 @@
+<h1 style="text-align:center; text-size-adjust: 300px; position: absolute;top: 450px;left: 40%; color: azure; ">Comanda dvs. a fost finalizata!</h1>
+<h1 style="text-align:center; text-size-adjust: 300px; position: absolute;top: 500px;left: 40%; color: azure; ">Va mai asteptam pe la noi!</h1>
+
+<router-outlet></router-outlet>
+<div id = "logged">
+  <button mat-raised-button (click) = "logout()"> 
+    Logout
+  </button>
+  <p>
+    Logged user: {{loggedUser.email}}
+  </p>
+</div>

@@ -1,0 +1,73 @@
+<h1 style="text-align:center; position: absolute;top: 400px;left: 40.5%; color: azure; ">{{ 'Alegeti restaurantul dorit' | marks}}</h1>
+<div id="container">
+  
+    <table mat-table [dataSource]="restaurants" class="mat-elevation-z8 demo-table tabel">
+       
+        <ng-container matColumnDef="denumire">
+          <th mat-header-cell *matHeaderCellDef> Denumire </th>
+          <td mat-cell *matCellDef="let element"> {{element.denumire}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="meniu">
+          <th mat-header-cell *matHeaderCellDef> Meniu </th>
+          <td mat-cell *matCellDef="let element" (click) = "goToRestaurantMenu(element.denumire)"> 
+            <mat-icon> restaurant_menu</mat-icon>
+           </td>
+        </ng-container>
+      
+     
+        <ng-container matColumnDef="tip_pret">
+          <th mat-header-cell *matHeaderCellDef> Tipul pretului </th>
+          <td mat-cell *matCellDef="let element"> {{element.tip_pret}} </td>
+        </ng-container>
+      
+      
+        <ng-container matColumnDef="specific">
+          <th mat-header-cell *matHeaderCellDef> Specific </th>
+          <td mat-cell *matCellDef="let element"> {{element.specific}} </td>
+        </ng-container>
+      
+    
+        <ng-container matColumnDef="tel_mobil">
+          <th mat-header-cell *matHeaderCellDef> Telefon mobil </th>
+          <td mat-cell *matCellDef="let element"> {{element.detalii_Contact.tel_mobil}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="tel_fix">
+            <th mat-header-cell *matHeaderCellDef> Telefon fix </th>
+            <td mat-cell *matCellDef="let element"> {{element.detalii_Contact.tel_fix}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef> Email </th>
+            <td mat-cell *matCellDef="let element"> {{element.detalii_Contact.email}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="site">
+            <th mat-header-cell *matHeaderCellDef> Site </th>
+            <td mat-cell *matCellDef="let element"> {{element.detalii_Contact.site}} </td>
+          </ng-container>
+
+         
+
+
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+</div>
+<router-outlet></router-outlet>
+<div id = "logged">
+  <button mat-raised-button (click) = "logout()"> 
+    Logout
+  </button>
+  <p>
+    Logged user: {{loggedUser.email}}
+  </p>
+</div>
+
+
+  
+  
+  
+  

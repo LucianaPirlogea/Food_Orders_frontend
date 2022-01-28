@@ -1,0 +1,27 @@
+#container{
+    position: absolute;
+    top: 350px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    //text-align: center;
+    
+}
+
+.tabel{
+    width: 60%;
+    color: green;
+}
+
+#logged{
+    position: absolute;
+    top: 900px;
+    left: 900px;
+    height: 50px;
+    
+
+    background-color: aliceblue;
+}

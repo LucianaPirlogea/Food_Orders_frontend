@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="form-section">
+      <h1 class="title">
+        Bine ati venit!
+      </h1>
+  
+      <form [formGroup]="registerForm" class="form">
+        <mat-form-field appearance="outline">
+          <mat-label>Nume</mat-label>
+          <input matInput placeholder="Nume" formControlName="Nume" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Prenume</mat-label>
+            <input matInput placeholder="Prenume" formControlName="Prenume" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" formControlName="Email" />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Numar de telefon</mat-label>
+            <input matInput placeholder="Nr_telefon" formControlName="Nr_telefon" />
+          </mat-form-field>
+
+         
+          <mat-form-field appearance="outline">
+            <mat-label>Adresa 1</mat-label>
+            <input matInput placeholder="Password" formControlName="adresa1" />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Adresa 2</mat-label>
+            <input matInput placeholder="Password" formControlName="adresa2" />
+          </mat-form-field> 
+  
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="Password" type="password" formControlName="Password" />
+        </mat-form-field>
+      </form>
+
+  
+      <button mat-raised-button (click)="register()">
+        Register
+      </button>
+    </div>
+  
+    
+  </div>
+  

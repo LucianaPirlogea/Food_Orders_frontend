@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="form-section">
+      <h1 class="title">
+        Bine ati venit!
+      </h1>
+  
+      <form [formGroup]="loginForm" class="form">
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Username" formControlName="email" />
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="Password" type="password" formControlName="password" />
+        </mat-form-field>
+      </form>
+
+      <a href="/Login/Register">Click aici pentru creare cont</a>
+  
+      <button mat-raised-button (click)="login()">
+        Login
+      </button>
+    </div>
+  
+    
+  </div>
+  
